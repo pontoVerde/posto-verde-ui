@@ -1,0 +1,135 @@
+.panel-body{
+    background-color: var(--branco1);
+}
+
+.panel-header{
+    display: flex;
+    margin: 4rem 0 2rem;
+    justify-content: space-between;
+}
+
+.panel-header div:first-child{
+    margin-right: 3.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.panel-header_title{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-family: var(--poppins);
+    color: var(--verde);
+}
+
+.panel-header_title span{
+    font-size: 10px;
+    color: var(--cinza3);
+}
+
+.panel-header_menu{
+    padding: 1rem;
+    background-color: var(--cinza1);
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 61px;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.panel-header_menu>i{
+    width: 21px;
+    height: 20px;
+}
+
+.panel-header_menu span{
+    font-size: 14px;
+    font-family: var(--poppins);
+}
+
+.panel-header_menu button{
+    border: none;
+    background-color: transparent;
+}
+
+.basic-info{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+
+.basic-info_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 256px;
+    min-width: 160px;
+    height: 61px;
+    margin-right: 2rem;
+}
+
+.basic-info_item:first-child{
+    background-color: var(--cinza2);
+}
+
+.basic-info_item:nth-child(2){
+    background-color: var(--cinza1);
+}
+
+.basic-info_item>span{
+    font-size: 48px;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+.basic-info_item div span{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.device-data{
+    margin: 2rem 0;
+    padding-left: 1rem;
+}
+
+.device-data_title h2{
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    font-family: var(--poppins);
+    color: var(--verde); 
+}
+
+.history_card{
+    padding: .5rem 2rem;
+}
+
+.history_card div{
+    width: auto;
+    height: 193px;
+    background-color: var(--cinza2);
+}
+
+@media only screen and (max-width: 600px) {
+    .basic-info_item>span{
+        font-size: 34px;
+    }
+
+    .basic-info_item div span{
+        font-size: 12px;
+    }
+
+    .basic-info{
+        margin: 0;
+    }
+
+    .panel-header_menu{
+        gap: 5px;
+    }
+
+}

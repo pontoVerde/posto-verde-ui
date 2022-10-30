@@ -47,12 +47,12 @@ export function AuthProvider({ children }) {
 
     setUser(user)
 
-    Router.push('/home');
+    Router.push('/menu');
   };
 
   function signOut() {
     destroyCookie(null, 'nextauth.token')
-    Router.reload()
+    Router.push('/')
   }
 
   return (

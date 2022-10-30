@@ -1,0 +1,110 @@
+
+.tokens-data{
+    padding: 2rem;
+}
+
+.tokens-data_title span{
+    width: 200px;
+}    
+
+.tokens-data_title{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cinza4);
+    margin-bottom: .5rem;
+    max-width: 1200px;
+}
+
+.tokens-data_title>div{
+    background-color: rgba(0,0,0,0.2);
+    height: 1px;
+    width: 50%;
+    min-width: 150px;
+    margin-left: 1rem;
+}
+
+.tokens-data_pattern1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.tokens-data_pattern1>div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tokens-data_pattern1>div span:first-child{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.01em;
+}
+
+.tokens-data_pattern1>div h3{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    max-width: 75px;
+}
+
+.tokens-data_pattern1>div:first-child span:first-child{
+    color: #BEBEBE;
+}
+
+.withdraw-button, .plan-button{
+    background-color: var(--branco2);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    width: 145px;
+    line-height: 17px;
+    padding: 0.4rem ;
+}
+
+.tokens-data_pattern2, .tokens-data_pattern3{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.tokens-data_pattern2>div{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    align-items: baseline;
+}
+
+.tokens-data_pattern2>div:first-child div{
+   display: flex;
+   flex-direction: column;
+   margin-right: 1rem;
+} 
+
+.tokens-data_pattern2>div:first-child span:first-child, .tokens-data_pattern2>div:last-child, .tokens-data_pattern3 span{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.tokens-data_pattern2>div:first-child span:nth-child(2){
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.01em;
+    margin-right: 1rem;
+}
+
+.tokens-data_pattern3 span{
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 620px) {
+    .tokens-data {
+        padding: 1rem;
+    }
+}
