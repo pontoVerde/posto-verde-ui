@@ -92,6 +92,7 @@ export function Stat(props) {
 
             return (
               <line
+                key={angle}
                 className="stroke-gray-300"
                 strokeWidth={2}
                 {...gauge.getTickProps({ angle, length: showText ? 12 : 6 })}
