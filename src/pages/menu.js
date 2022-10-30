@@ -5,6 +5,7 @@ export default function Menu() {
     const router = useRouter();
 
     return (
+        <div className="panel-body cont">
             <main>
                 <Navbar/>
                 <section className="device-data">
@@ -24,6 +25,8 @@ export default function Menu() {
                                 </div>
                                 <div className="device-data_card__btt" onClick={() => router.push('producao')}>
                                 
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 7v-6l11 11-11 11v-6h-13v-10z"/></svg>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -36,9 +39,9 @@ export default function Menu() {
                                     <p> Fazenda 2</p>
                                 </div>
                                 <div className="device-data_card__btt" id="btt_{{$device->id}}">
-                                    {/* <a href="#">
+                                    
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 7v-6l11 11-11 11v-6h-13v-10z"/></svg>
-                                    </a> */}
+                                    
                                 </div>
                             </div>
                         </div>
@@ -50,5 +53,6 @@ export default function Menu() {
                     </div>
                 </section>
             </main>
+            </div>
     )
 }

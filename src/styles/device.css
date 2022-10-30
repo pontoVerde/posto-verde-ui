@@ -40,9 +40,12 @@
     float: right;
     border-radius: 5px;
     text-align: center;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
 }
 
-.device-data_card__btt a svg{
+.device-data_card__btt svg{
     width: 35px;
     height: 35px;
     margin: 0.4rem;

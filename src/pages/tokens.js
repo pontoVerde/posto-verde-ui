@@ -4,6 +4,8 @@ export default function Tokens() {
 
     return(
         <>
+                <div className="panel-body cont">
+
             <Navbar/>
             <main>
                 <section className="tokens-data">
@@ -85,6 +87,7 @@ export default function Tokens() {
                     </div>
                 </section>
             </main>
+            </div>
         </>
     )
 }

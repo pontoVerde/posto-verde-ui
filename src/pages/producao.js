@@ -6,6 +6,7 @@ export default function Production (){
     const router = useRouter();
     return (
         <>
+        <div className="panel-body cont">
         <Head>
             <title>Home</title>
         </Head>
@@ -56,7 +57,7 @@ export default function Production (){
             <footer>
                 
             </footer>
+            </div>
         </>
-
     )
 }

@@ -44,15 +44,21 @@
     height: 20px;
 }
 
+.panel-header_menu svg { 
+    width: 20px;
+}
+
 .panel-header_menu span{
     font-size: 14px;
-    font-family: var(--poppins);
 }
 
 .panel-header_menu button{
     border: none;
     background-color: transparent;
 }
+
+
+
 
 .basic-info{
     display: flex;
@@ -72,6 +78,8 @@
     height: 61px;
     margin-right: 2rem;
 }
+
+
 
 .basic-info_item:first-child{
     background-color: var(--cinza2);

@@ -1,13 +1,22 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { AuthContext } from '../context/authContext';
 import { useRouter } from 'next/router';
+import { Bars4Icon } from '@heroicons/react/24/solid'
+
 
 const Navbar = (props) => {
 
     const { user, isAuthenticated, signOut } = useContext(AuthContext);
     const router = useRouter();
+    
+    const [isToken, setIsToken] = useState("");
+    useEffect(() => {
+        setIsToken(window.location.pathname)
+    }, [])
+    
+
     return (
         <>
             <header className="panel-header">
@@ -20,15 +29,20 @@ const Navbar = (props) => {
                 </div>
             </div>
             <div className="panel-header_menu">
-                <i className="fa-regular fa-compass"></i>
+                 <Bars4Icon className="h-10 w-10"/>   
                 <span>Menu</span>
                 <button type="button">
-                    <i className="fa-solid fa-caret-down"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+
+
                 </button>
             </div>
         </header>
 
         <section className="basic-info">
+                    <a onClick={() => router.push('/menu')}>
                     <div className="basic-info_item">
                         <span>
                             2
@@ -40,7 +54,8 @@ const Navbar = (props) => {
                             </span>
                         </div>
                     </div>
-                    <a onClick={() => router.push('/tokens')}>
+                    </a>
+                    <a onClick={() => router.push('/tokens')} >
                         <div className="basic-info_item">
                             <span>
                                 105
