@@ -21,7 +21,7 @@ export default function Menu() {
                     <div className="device-data_cards">
                         <div className="device-data_card device_on">
                             <div className="device-data_card__painel">
-                                <div id="gauge1"></div>
+                            <Stat value={20}/>
                             </div>
                             <div className="device-data_card__infos">
                                 <div className="device-data_cards__name">
@@ -36,7 +36,7 @@ export default function Menu() {
                         </div>
                         <div className="device-data_card device_off" id="card_{{$device->id}}">
                             <div className="device-data_card__painel">
-                                <div id="gauge1"></div>
+                                <Stat value={80}/>
                             </div>
                             <div className="device-data_card__infos">
                                 <div className="device-data_cards__name">
@@ -54,7 +54,7 @@ export default function Menu() {
                 <section className="history_card">
                 </section>
             {/* Posicionar no local correto */}
-            <Stat value={20}/>
+            
             <Chart/>
             </main>
             </div>
