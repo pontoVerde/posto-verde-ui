@@ -1,9 +1,13 @@
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
+// import {useGauge} from "../hooks/useGauge";
+import Chart from "../components/grafico";
+import {Stat} from "../components/gauge";
 
 export default function Menu() {
     const router = useRouter();
 
+    
     return (
         <div className="panel-body cont">
             <main>
@@ -48,10 +52,10 @@ export default function Menu() {
                     </div>
                 </section>
                 <section className="history_card">
-                    <div>
-
-                    </div>
                 </section>
+            {/* Posicionar no local correto */}
+            <Stat value={20}/>
+            <Chart/>
             </main>
             </div>
     )
