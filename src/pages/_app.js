@@ -4,11 +4,14 @@ import '../styles/app.css'
 import '../styles/panel.css'
 import '../styles/device.css'
 import '../styles/tokens.css'
+import { SocketProvider } from '../context/socket';
 
 function MyApp({ Component, pageProps }) {
   return (
   <AuthProvider>
-    <Component {...pageProps} />
+    <SocketProvider>
+      <Component {...pageProps} />
+    </SocketProvider>
   </AuthProvider>
   )
 }
