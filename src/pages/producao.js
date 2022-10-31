@@ -34,9 +34,8 @@ export default function Production (){
         <>
         <div className="panel-body cont">
         <Head>
-          <title>Home</title>
+            <title>Home</title>
         </Head>
-
         <Navbar/>
             <main>
                 <section className="device-data">
@@ -87,13 +86,6 @@ export default function Production (){
                 
             </footer>
             </div>
-          </section>
-          <section className='history_card'>
-            <div></div>
-          </section>
-        </main>
-        <footer></footer>
-      </div>
-    </>
-  );
+        </>
+    )
 }
