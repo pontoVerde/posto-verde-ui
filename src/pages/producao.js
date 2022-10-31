@@ -1,9 +1,35 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "../components/navbar";
+import Chart from "../components/grafico";
+import { Stat } from "../components/gauge";
+import { useContext, useEffect, useState } from "react";
+import { SocketProvider } from "../context/socket";
+
+export const data = [
+    [
+      { type: "date", label: "Day" },
+      "Average temperature"
+      // "Average hours of daylight",
+    ],
+    [new Date(2022, 10, 29), 3],
+    [new Date(2022, 10, 29), 4],
+    [new Date(2022, 10, 30), 5],
+];
 
 export default function Production (){
     const router = useRouter();
+    const socket = useContext(SocketProvider);
+    const [speed1, setSpeed1] = useState(0);
+
+    useEffect(() => {
+        if(socket?.connected) {
+            socket.on('gauge_speed1', (data) => {
+                    setSpeed1(data);
+            });
+        }
+    },[socket]);
+
     return (
         <>
         <div className="panel-body cont">
@@ -23,7 +49,9 @@ export default function Production (){
                     <div className="device-data_cards">
                         <div className="device-data_card device_on">
                             <div className="device-data_card__painel">
-                                <div id="gauge1"></div>
+                                <div id="gauge1">
+                                    <Stat value={speed1} />
+                                </div>
                             </div>
                         </div>
                         <div className="production-management">
@@ -48,11 +76,11 @@ export default function Production (){
                         </div>
                     </div>
                 </section>
-                <section className="history_card">
+                <Chart data={data}/>
+                {/* <section className="history_card">
                     <div>
-
                     </div>
-                </section>
+                </section> */}
             </main>
             <footer>
                 

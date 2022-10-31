@@ -4,6 +4,16 @@ import Chart from "../components/grafico";
 import { Stat } from "../components/gauge";
 import { useContext, useEffect, useState } from "react";
 import SocketProvider from '../context/socket';
+export const data = [
+    [
+      { type: "date", label: "Day" },
+      "Average temperature",
+      "Average hours of daylight"
+    ],
+    [new Date(2022, 10, 29), 20, 40],
+    [new Date(2022, 10, 29), 22, 42],
+    [new Date(2022, 10, 30), 23, 44],
+];
 
 export default function Menu() {
     const socket = useContext(SocketProvider);
@@ -12,10 +22,9 @@ export default function Menu() {
     const [speed1, setSpeed1] = useState(0);
     const [speed2, setSpeed2] = useState(0);
     let started = false;
-    console.log(socket)
+
     useEffect(() => {
         if(socket?.connected && !started) {
-            console.log('test')
             socket.emit('gauge1', '');
             socket.emit('gauge2', '');
             socket.on('gauge_speed1', (data) => {
@@ -89,8 +98,7 @@ export default function Menu() {
             </section>
             <section className='history_card'></section>
             {/* Posicionar no local correto */}
-
-            <Chart />
+            <Chart data={data}/>
             </main>
         </div>
     );
