@@ -1,6 +1,5 @@
 import { LockClosedIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 import { AuthContext } from '../context/authContext'
 import { useContext } from 'react';
 
