@@ -113,6 +113,9 @@
     width: 100%;
     flex-direction: column;
   }
+  .basic-info {
+    justify-content: center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

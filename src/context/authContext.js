@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
   const isAuthenticated = !!user;
 
   async function getUserData(token) {
-    const response = await AuthApi('', {
+    const response = await AuthApi('/checkUser', {
         method: 'POST',
         data: { token }
     })
