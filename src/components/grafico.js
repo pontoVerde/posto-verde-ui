@@ -1,27 +1,11 @@
 import { Chart } from 'react-google-charts';
 
-export const data = [
-  [{ type: 'date', label: 'Day' }, 'Fazenda 1', 'Fazenda 2'],
-  [new Date(2014, 0), -0.5, 5.7],
-  [new Date(2014, 1), 0.4, 8.7],
-  [new Date(2014, 2), 0.5, 12],
-  [new Date(2014, 3), 2.9, 15.3],
-  [new Date(2014, 4), 6.3, 18.6],
-  [new Date(2014, 5), 9, 20.9],
-  [new Date(2014, 6), 10.6, 19.8],
-  [new Date(2014, 7), 10.3, 16.6],
-  [new Date(2014, 8), 7.4, 13.3],
-  [new Date(2014, 9), 4.4, 9.9],
-  [new Date(2014, 10), 1.1, 6.6],
-  [new Date(2014, 11), -0.2, 4.5],
-];
-
 export const options = {
   chart: {
     title: 'Geração de energia dentro das últimas 24 horas.',
   },
-  width: 900,
-  height: 500,
+  width: '100%',
+  height: 400,
   series: {
     // Gives each series an axis name that matches the Y-axis below.
     0: { axis: 'Temps' },
@@ -35,8 +19,10 @@ export const options = {
     },
   },
 };
+  
+export default function Grafico(props) {
+  const {data} = props;  
 
-export default function Grafico() {
   return (
     <Chart
       chartType='Line'

@@ -4,23 +4,32 @@ import Chart from '../components/grafico';
 import { Stat } from '../components/gauge';
 import { useContext, useEffect, useState } from 'react';
 import SocketProvider from '../context/socket';
+export const data = [
+    [
+      { type: "date", label: "Day" },
+      "Average temperature",
+      "Average hours of daylight"
+    ],
+    [new Date(2022, 10, 29), 20, 40],
+    [new Date(2022, 10, 29), 22, 42],
+    [new Date(2022, 10, 30), 23, 44],
+];
 
 export default function Menu() {
   const socket = useContext(SocketProvider);
   const router = useRouter();
 
-  const [speed1, setSpeed1] = useState(0);
-  const [speed2, setSpeed2] = useState(0);
-  let started = false;
-  console.log(socket);
-  useEffect(() => {
-    if (socket?.connected && !started) {
-      console.log('test');
-      socket.emit('gauge1', '');
-      socket.emit('gauge2', '');
-      socket.on('gauge_speed1', (data) => {
-        setSpeed1(data);
-      });
+    const [speed1, setSpeed1] = useState(0);
+    const [speed2, setSpeed2] = useState(0);
+    let started = false;
+
+    useEffect(() => {
+        if(socket?.connected && !started) {
+            socket.emit('gauge1', '');
+            socket.emit('gauge2', '');
+            socket.on('gauge_speed1', (data) => {
+                    setSpeed1(data);
+            });
 
       socket.on('gauge_speed2', (data) => {
         setSpeed2(data);
@@ -85,15 +94,15 @@ export default function Menu() {
                     <path d='M13 7v-6l11 11-11 11v-6h-13v-10z' />
                   </svg>
                 </div>
+
               </div>
             </div>
           </div>
-        </section>
-        <section className='history_card'></section>
-        {/* Posicionar no local correto */}
-
-        <Chart />
-      </main>
-    </div>
-  );
+          </section>
+          <section className='history_card'></section>
+          {/* Posicionar no local correto */}
+          <Chart data={data}/>
+          </main>
+        </div>
+    );
 }

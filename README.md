@@ -21,7 +21,7 @@ Para acessar o sistema, entrar em [http://localhost:3000](http://localhost:3000)
 
 As páginas desenvolvidas no projeto são: 
 
-Onde os associados farão gestão de suas plantas de geração, podendo visualizar as plantas ativas, bem como o resultado destas. 
+Onde os associados farão gestão de suas plantas de geração, podendo visualizar as plantas ativas, bem como a quantidade de energia produzida e o tokens gerados. 
 http://localhost:3000/menu
 
 Exemplo de página de acompanhamento da plantas de geração ativas. 
