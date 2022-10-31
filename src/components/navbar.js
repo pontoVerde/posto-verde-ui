@@ -7,6 +7,7 @@ const Navbar = (props) => {
   const { user, isAuthenticated, signOut } = useContext(AuthContext);
 
   const router = useRouter();
+  console.log(user);
 
   return (
     <>
@@ -22,7 +23,7 @@ const Navbar = (props) => {
         <div className='panel-header_container'>
           <p>
             Bem vindo, <br></br>
-            {isAuthenticated ? user?.name : ''}
+            {isAuthenticated ? user?.name : 'Usuário'}
           </p>
           <div className='panel-header_menu'>
             <Bars4Icon className='h-10 w-10' />

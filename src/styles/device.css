@@ -1,9 +1,9 @@
 .device_on {
-  background-color: var(--cinza1);
+  background-color: var(--cinza2);
 }
 
 .device_off {
-  background-color: var(--cinza2);
+  background-color: var(--cinza1);
 }
 
 .device-data_cards {
@@ -50,6 +50,17 @@
   height: 35px;
   margin: 0.4rem;
   fill: var(--cinza2);
+}
+
+.device-data_card__painel {
+  position: relative;
+  bottom: 10px;
+}
+
+.p-4 {
+  display: block;
+  align-content: center;
+  justify-content: center;
 }
 
 .production-management {
