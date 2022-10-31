@@ -9,6 +9,7 @@ Para desenvolvimento da aplicação foram utilizados, NodeJS, Express, NextJS, M
 Primeiro, precisamos rodar o servidor:
 
 ```bash
+npm install
 npm run dev
 # ou
 yarn dev
