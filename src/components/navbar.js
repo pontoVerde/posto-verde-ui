@@ -1,20 +1,12 @@
-import { Fragment, useContext, useEffect, useState } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../context/authContext';
 import { useRouter } from 'next/router';
 import { Bars4Icon } from '@heroicons/react/24/solid';
 
 const Navbar = (props) => {
   const { user, isAuthenticated, signOut } = useContext(AuthContext);
+
   const router = useRouter();
-
-  const [isToken, setIsToken] = useState('');
-  useEffect(() => {
-    setIsToken(window.location.pathname);
-  }, []);
-
-  const name = 'William Perboni';
 
   return (
     <>
@@ -29,9 +21,8 @@ const Navbar = (props) => {
         </div>
         <div className='panel-header_container'>
           <p>
-            {' '}
             Bem vindo, <br></br>
-            {name}{' '}
+            {isAuthenticated ? user?.name : ''}
           </p>
           <div className='panel-header_menu'>
             <Bars4Icon className='h-10 w-10' />
