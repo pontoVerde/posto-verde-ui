@@ -1,11 +1,7 @@
-import {Chart} from 'react-google-charts';
+import { Chart } from 'react-google-charts';
 
 export const data = [
-  [
-    { type: "date", label: "Day" },
-    "Average temperature",
-    "Average hours of daylight",
-  ],
+  [{ type: 'date', label: 'Day' }, 'Fazenda 1', 'Fazenda 2'],
   [new Date(2014, 0), -0.5, 5.7],
   [new Date(2014, 1), 0.4, 8.7],
   [new Date(2014, 2), 0.5, 12],
@@ -22,30 +18,30 @@ export const data = [
 
 export const options = {
   chart: {
-    title: "Average Temperatures and Daylight in Iceland Throughout the Year",
+    title: 'Geração de energia dentro das últimas 24 horas.',
   },
   width: 900,
   height: 500,
   series: {
     // Gives each series an axis name that matches the Y-axis below.
-    0: { axis: "Temps" },
-    1: { axis: "Daylight" },
+    0: { axis: 'Temps' },
+    1: { axis: 'Daylight' },
   },
   axes: {
     // Adds labels to each axis; they don't have to match the axis names.
     y: {
-      Temps: { label: "Temps (Celsius)" },
-      Daylight: { label: "Daylight" },
+      Temps: { label: 'Temps (Celsius)' },
+      Daylight: { label: 'Daylight' },
     },
   },
 };
-  
-export default function Grafico() {    
+
+export default function Grafico() {
   return (
     <Chart
-      chartType="Line"
-      width="100%"
-      height="400px"
+      chartType='Line'
+      width='100%'
+      height='400px'
       data={data}
       options={options}
     />
