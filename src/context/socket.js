@@ -7,19 +7,18 @@ let initState = {};
 const SocketContext = createContext(initState);
 
 export const SocketProvider = ({ children }) => {
-
     const [socket, setSocket] = useState({});
-    const { user } = useContext(AuthContext);
-    console.log(user)
+    const { user, isAuthenticated } = useContext(AuthContext);
+
     useEffect(() => {
-        if (true) {
+        if (isAuthenticated) {
             const socket = io(process.env.NEXT_PUBLIC_AUTH_API, {
                 reconnectionDelayMax: 10000,
                 auth: {
                   token: "123"
                 },
                 query: {
-                  "my-key": "my-value"
+                  "username": user?.name
                 }
               });
             socket.on('connect', () => {
@@ -28,7 +27,7 @@ export const SocketProvider = ({ children }) => {
             setSocket(socket);
             return () => socket.close();
         }
-    }, [setSocket, user]);
+    }, [user]);
 
     return (
         <SocketContext.Provider value={socket}>
