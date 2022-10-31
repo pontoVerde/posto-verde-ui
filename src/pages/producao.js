@@ -9,7 +9,7 @@ import { SocketProvider } from "../context/socket";
 export const data = [
     [
       { type: "date", label: "Day" },
-      "Average temperature"
+      "Produção média",
       // "Average hours of daylight",
     ],
     [new Date(2022, 10, 29), 3],

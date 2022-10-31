@@ -7,8 +7,8 @@ import SocketProvider from '../context/socket';
 export const data = [
     [
       { type: "date", label: "Day" },
-      "Average temperature",
-      "Average hours of daylight"
+      "Produção média",
+      "Média diária de produção",
     ],
     [new Date(2022, 10, 29), 20, 40],
     [new Date(2022, 10, 29), 22, 42],

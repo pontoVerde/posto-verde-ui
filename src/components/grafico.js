@@ -14,8 +14,8 @@ export const options = {
   axes: {
     // Adds labels to each axis; they don't have to match the axis names.
     y: {
-      Temps: { label: 'Temps (Celsius)' },
-      Daylight: { label: 'Daylight' },
+      Temps: { label: 'Geração de energia (kWh)' },
+      Daylight: { label: 'Dia' },
     },
   },
 };
