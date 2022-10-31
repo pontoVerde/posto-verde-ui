@@ -1,6 +1,6 @@
 Essa é uma aplicação demo buscando representar o modelo de negócio / ecossistema pontoVerde, solução aplicada ao mercado de Energia. 
 
-# Tecnologias utilizadas
+## Tecnologias utilizadas
 
 Para desenvolvimento da aplicação foram utilizados, NodeJS, Express, NextJS, MongoDB, SocketIO e Google Charts
 
@@ -25,6 +25,7 @@ http://localhost:3000/menu
 
 Exemplo de página de acompanhamento da plantas de geração ativas. 
 http://localhost:3000/producao
+
 
 Página de gestão, venda e saque dos tokens produzidos por meio da produção de energia.  
 http://localhost:3000/producao
