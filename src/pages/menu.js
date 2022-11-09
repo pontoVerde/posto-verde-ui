@@ -111,7 +111,7 @@ export default function Menu() {
             >
               <div className='device-data_card__painel'>
                 <div className='icon-container'>
-                  <img src="https://cdn-icons-png.flaticon.com/512/3161/3161390.png"></img>
+                  <img src="https://cdn-icons-png.flaticon.com/512/4340/4340499.png"></img>
                 </div>
               </div>
             </div>

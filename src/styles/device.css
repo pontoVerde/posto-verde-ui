@@ -50,13 +50,13 @@
   max-width: 500px;
   border-radius: 12px;
   transition: 0.15s;
-  background-color: var(--cinza2);
+  background-color: var(--cinza1);
   font-size: 6rem;
 
 }
 
 .addFarm:hover{
-  background-color: var(--cinza3);
+  background-color: var(--cinza2);
   color: white;
   transition: 0.15s;
   cursor: pointer;
