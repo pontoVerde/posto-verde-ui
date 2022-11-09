@@ -4,6 +4,7 @@ import Chart from '../components/grafico';
 import { Stat } from '../components/gauge';
 import { useContext, useEffect, useState } from 'react';
 import SocketContext from '../context/socket';
+import Image from 'next/image';
 
 export const data = [
   [
@@ -44,6 +45,9 @@ export default function Menu() {
 
   const [speed1, setSpeed1] = useState(0);
   const [speed2, setSpeed2] = useState(0);
+  const [show, setShow] = useState(false);
+  const [rotate, setRotate] = useState(false);
+   
   let started = false;
 
   useEffect(() => {
@@ -87,7 +91,8 @@ export default function Menu() {
                 </div>
               </div>
             </div>
-            <div
+            { show ?  
+              <div
               className={
                 speed2 > 0
                   ? 'device-data_card device_on'
@@ -105,13 +110,32 @@ export default function Menu() {
                   <p> Fazenda 2</p>
                 </div>
               </div>
-            </div>
+            </div> : ''}
             <div
               className='addFarm'
+              onClick={() => {setTimeout(() => {
+                setShow(true)
+                setRotate(false)
+              }, "800")
+              setRotate(true)
+            }}
             >
               <div className='device-data_card__painel'>
                 <div className='icon-container'>
-                  <img src="https://cdn-icons-png.flaticon.com/512/4340/4340499.png"></img>
+                  {!rotate ? <Image 
+                      src='https://cdn-icons-png.flaticon.com/512/4340/4340499.png'
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                  />
+                  : <Image 
+                      src='https://cdn-icons-png.flaticon.com/512/4340/4340499.png'
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{ animation:'spin 1.5s linear infinite' }}
+                  />}
+                    {/* src=""></img> */}
                 </div>
               </div>
             </div>
