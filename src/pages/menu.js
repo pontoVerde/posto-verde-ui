@@ -5,6 +5,8 @@ import { Stat } from '../components/gauge';
 import { useContext, useEffect, useState } from 'react';
 import SocketContext from '../context/socket';
 import Image from 'next/image';
+import { setCookie, parseCookies } from 'nookies';
+import { parse } from 'postcss';
 
 export const data = [
   [
@@ -60,6 +62,14 @@ export default function Menu() {
         setSpeed2(data);
       });
       started = true;
+      const showCookie = parseCookies()
+
+      const { showSet } = showCookie
+
+      if(showSet){
+        setShow(true)
+      }
+      console.log(showCookie)
     }
   }, [socket]);
 
@@ -115,6 +125,7 @@ export default function Menu() {
               className='addFarm'
               onClick={() => {setTimeout(() => {
                 setShow(true)
+                setCookie(null, 'showSet', true)
                 setRotate(false)
               }, "800")
               setRotate(true)
