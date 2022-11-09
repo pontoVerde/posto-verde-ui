@@ -37,6 +37,31 @@
   transition: 0.15s;
 }
 
+.addFarm{
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 0.4rem 0;
+  color: var(--cinza3);
+  font-size: 20px;
+  min-width: 278px;
+  font-weight: bold;
+  max-width: 500px;
+  border-radius: 12px;
+  transition: 0.15s;
+  background-color: var(--cinza2);
+  font-size: 6rem;
+
+}
+
+.addFarm:hover{
+  background-color: var(--verde);
+  color: white;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
 .device-data_card p {
   font-size: 1rem;
 }
@@ -71,6 +96,7 @@
   position: relative;
   bottom: 10px;
 }
+
 
 .production-management {
   padding: 0 1rem;

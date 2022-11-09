@@ -106,6 +106,13 @@ export default function Menu() {
                 </div>
               </div>
             </div>
+            <div
+              className='addFarm'
+            >
+              <div className='device-data_card__painel'>
+                <span id='plus'>+</span>
+              </div>
+            </div>
           </div>
         </section>
         <section className='history_card'></section>
