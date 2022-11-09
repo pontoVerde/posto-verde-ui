@@ -1,15 +1,23 @@
 .device_on {
-  background-color: var(--cinza2);
+  background-color: var(--cinza1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.device_on:hover {
+  background-color: var(--verde);
+  color: white;
+  cursor: pointer;
 }
 
 .device_off {
-  background-color: var(--cinza1);
+  background-color: var(--cinza2);
 }
 
 .device-data_cards {
   display: flex;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 0.4rem 0;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -17,20 +25,27 @@
 .device-data_card {
   height: 150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem;
-  margin: 1rem 0;
-  color: var(--branco);
+  margin: 0.4rem 0;
+  color: var(--cinza3);
   font-size: 20px;
-  min-width: 302px;
+  min-width: 256px;
   font-weight: bold;
-  text-transform: uppercase;
   max-width: 500px;
+  border-radius: 12px;
+  transition: 0.15s;
+}
+
+.device-data_card p {
+  font-size: 1rem;
 }
 
 .device-data_card__infos {
-  display: block;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .device-data_card__btt {
@@ -55,12 +70,6 @@
 .device-data_card__painel {
   position: relative;
   bottom: 10px;
-}
-
-.p-4 {
-  display: block;
-  align-content: center;
-  justify-content: center;
 }
 
 .production-management {

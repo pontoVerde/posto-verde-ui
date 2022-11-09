@@ -84,6 +84,17 @@ export default function Tokens() {
                                 SACAR TOKENS
                             </button>
                         </div>
+                        <div className="address-input">
+                            <p>
+                                Endereço destino
+                            </p>
+                            <form action="" method="post">
+                                <input type="text" placeholder="endereço da carteira" name="wallet-address"/> 
+                                <button>
+                                    CONFIRMAR
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </section>
             </main>

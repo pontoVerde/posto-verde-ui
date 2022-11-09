@@ -13,9 +13,9 @@ export const SocketProvider = ({ children }) => {
     useEffect(() => {
         if (isAuthenticated) {
             const socket = io(process.env.NEXT_PUBLIC_AUTH_API, {
-                reconnectionDelayMax: 10000,
+                reconnectionDelayMax: 2000,
                 auth: {
-                  token: "123"
+                  token: Date.now(),
                 },
                 query: {
                   "username": user?.name
@@ -23,8 +23,8 @@ export const SocketProvider = ({ children }) => {
               });
             socket.on('connect', () => {
                 console.log('connected')
+                setSocket(socket);
             });
-            setSocket(socket);
             return () => socket.close();
         }
     }, [user]);

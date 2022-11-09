@@ -14,14 +14,13 @@ export const options = {
   axes: {
     // Adds labels to each axis; they don't have to match the axis names.
     y: {
-      Temps: { label: 'Geração de energia (kWh)' },
-      Daylight: { label: 'Dia' },
+      Temps: { label: 'Geração de energia (kWh)' }
     },
   },
 };
-  
+
 export default function Grafico(props) {
-  const {data} = props;  
+  const { data } = props;
 
   return (
     <Chart

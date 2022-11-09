@@ -25,7 +25,7 @@ export default function SignIn() {
           <div>
             <div onClick={() => router.push('menu')}>
               <h1 className='panel-header_title'>
-                Ponto Verde
+                pontoVerde
                 <span>v.01</span>
               </h1>
             </div>

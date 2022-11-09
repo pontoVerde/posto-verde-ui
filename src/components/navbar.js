@@ -5,18 +5,17 @@ import { Bars4Icon } from '@heroicons/react/24/solid';
 
 const Navbar = (props) => {
   const { user, isAuthenticated, signOut } = useContext(AuthContext);
-
   const router = useRouter();
-  console.log(user);
+
+  const [clicked, setClicked] = useState(false);
 
   return (
     <>
-      <header className='panel-header'>
+      <header className='panel-header cont'>
         <div>
           <div onClick={() => router.push('menu')}>
             <h1 className='panel-header_title'>
-              Ponto Verde
-              <span>v.01</span>
+              pontoVerde<span>v.02</span>
             </h1>
           </div>
         </div>
@@ -26,7 +25,7 @@ const Navbar = (props) => {
             {isAuthenticated ? user?.name : 'Usuário'}
           </p>
           <div className='panel-header_menu'>
-            <Bars4Icon className='h-10 w-10' />
+            <Bars4Icon className='h-5 w-5' />
             <button type='button'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -34,7 +33,7 @@ const Navbar = (props) => {
                 viewBox='0 0 24 24'
                 stroke-width='0.5'
                 stroke='currentColor'
-                class='w-6 h-6'
+                class='w-3 h-3'
               >
                 <path
                   stroke-linecap='round'
@@ -49,7 +48,7 @@ const Navbar = (props) => {
 
       <section className='basic-info'>
         <a onClick={() => router.push('/menu')}>
-          <div className='basic-info_item'>
+          <div className={router?.pathname == '/menu' ? 'basic-info_item navbar_on' : 'basic-info_item navbar_off'}>
             <span>2</span>
             <div>
               <span>Plantas ativas</span>
@@ -57,7 +56,7 @@ const Navbar = (props) => {
           </div>
         </a>
         <a onClick={() => router.push('/tokens')}>
-          <div className='basic-info_item'>
+          <div className={router?.pathname == '/tokens' ? 'basic-info_item navbar_on' : 'basic-info_item navbar_off'}>
             <span>105</span>
             <div>
               <span>Tokens emitidos</span>

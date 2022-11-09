@@ -1,11 +1,12 @@
 .panel-body {
-  background-color: var(--branco1);
+  background-color: var(--branco);
 }
 
 .panel-header {
   display: flex;
-  margin: 2.5rem 0 2rem;
+  padding: 2rem 0;
   justify-content: space-between;
+  background-color: white;
 }
 
 .panel-header div:first-child {
@@ -15,12 +16,16 @@
 }
 
 .panel-header_title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.2px;
   font-family: var(--poppins);
   color: var(--verde);
+}
+
+.panel-header_title:hover {
+  cursor: pointer;
 }
 
 .panel-header_title span {
@@ -29,18 +34,19 @@
 }
 
 .panel-header_menu {
-  padding: 1rem;
+  padding: 0.4rem;
   background-color: var(--cinza1);
   display: flex;
   align-items: center;
   width: fit-content;
-  height: 61px;
-  gap: 10px;
-  border-radius: 8px;
+  gap: 1px;
+  border-radius: 5px;
 }
 
 .panel-header_menu:hover {
   border-color: var(--verde);
+  background-color: var(--verde);
+  cursor: pointer;
 }
 
 .panel-header_menu > i {
@@ -64,13 +70,13 @@
 .panel-header_container {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .panel-header_container p {
   text-align: right;
-  line-height: 20px;
-  font-size: 1rem;
+  line-height: 15px;
+  font-size: 0.8rem;
   color: var(--verde);
   word-break: keep-all;
 }
@@ -93,18 +99,25 @@
   min-width: 160px;
   height: 61px;
   margin-right: 2rem;
+  text-align: center;
+  transition: 0.15s;
 }
 
 .basic-info a {
   width: 256px;
 }
 
-.basic-info_item:first-child {
-  background-color: var(--cinza2);
+.navbar_on {
+  background-color: var(--verde);
+  border-radius: 8px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.basic-info_item:nth-child(2) {
-  background-color: var(--cinza1);
+.navbar_off {
+  background-color: var(--cinza2);
+  border-radius: 8px;
 }
 
 .basic-info_item > span {
@@ -116,6 +129,12 @@
 .basic-info_item div span {
   font-size: 14px;
   line-height: 17px;
+}
+
+.basic-info_item:hover {
+  color: white;
+  background-color: var(--verde);
+  cursor: pointer;
 }
 
 .device-data {

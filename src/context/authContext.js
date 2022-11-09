@@ -10,8 +10,8 @@ import AuthApi from '../services/authApi';
 export const AuthContext = createContext({});
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState({});
-
+  const [user, setUser] = useState();
+  
   const isAuthenticated = !!user;
 
   async function getUserData(token) {

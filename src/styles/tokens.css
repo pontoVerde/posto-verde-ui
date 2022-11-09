@@ -103,6 +103,47 @@
     margin-right: 1rem;
 }
 
+.address-input{
+    margin: 1rem 0;
+}
+
+.address-input p{
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 13px;
+    margin-bottom: .7rem;
+}
+
+.address-input form{
+    display: flex;
+    gap: 2rem;
+}
+
+.address-input input{
+    background-color: var(--cinza1);
+    border: none;
+    width: 357px;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.address-input .address-input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.address-input button{
+    background-color: var(--branco2);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    width: 145px;
+    line-height: 17px;
+    padding: 0.4rem;
+}
+
 @media only screen and (max-width: 620px) {
     .tokens-data {
         padding: 1rem;
