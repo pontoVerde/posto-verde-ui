@@ -110,7 +110,9 @@ export default function Menu() {
               className='addFarm'
             >
               <div className='device-data_card__painel'>
-                <span id='plus'>+</span>
+                <div className='icon-container'>
+                  <img src="https://cdn-icons-png.flaticon.com/512/3161/3161390.png"></img>
+                </div>
               </div>
             </div>
           </div>
